@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCostCalculator();
   initFaqAccordion();
   initConsultationForm();
+  initInteractiveTimeline();
 });
 
 // --------------------------------------------------------------------------
@@ -252,4 +253,59 @@ function initConsultationForm() {
       </div>
     `;
   });
+}
+
+// --------------------------------------------------------------------------
+// 6. Interactive Scroll-Driven Timeline Color & Progress
+// --------------------------------------------------------------------------
+function initInteractiveTimeline() {
+  const container = document.querySelector('.timeline-container');
+  const progressBar = document.getElementById('timelineProgressBar');
+  const steps = document.querySelectorAll('.timeline-step');
+  if (!container || !steps.length) return;
+
+  function onScroll() {
+    const rect = container.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    // Trigger line is 55% from the top of the viewport
+    const triggerY = windowHeight * 0.55;
+
+    // Calculate progress fill percentage through timeline container
+    const totalHeight = rect.height;
+    const progressPx = Math.max(0, Math.min(totalHeight, triggerY - rect.top));
+    const progressPercent = (progressPx / totalHeight) * 100;
+
+    if (progressBar) {
+      progressBar.style.height = `${progressPercent}%`;
+    }
+
+    // Activate/illuminate each step as the scroll line crosses its node
+    steps.forEach((step) => {
+      const stepRect = step.getBoundingClientRect();
+      const nodeCenter = stepRect.top + 24;
+
+      if (nodeCenter <= triggerY) {
+        step.classList.add('active');
+      } else {
+        step.classList.remove('active');
+      }
+    });
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', onScroll, { passive: true });
+
+  // Initial calculation on load
+  onScroll();
 }
