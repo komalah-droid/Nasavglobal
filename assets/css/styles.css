@@ -1452,68 +1452,25 @@ button, input, select, textarea {
   }
 }
 
-/* Dynamic Animated Progress Bar (Scroll Fill) */
+/* Dynamic Animated Progress Bar (Scroll Fill - Pure Royal Blue) */
 .timeline-progress-bar {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 0%;
-  background: linear-gradient(180deg, 
-    #0D9488 0%, 
-    #0284C7 20%, 
-    #2563EB 40%, 
-    #4F46E5 60%, 
-    #7C3AED 80%, 
-    #D97706 100%
-  );
+  background: linear-gradient(180deg, #60A5FA 0%, #2563EB 50%, #1D4ED8 100%);
   border-radius: 4px;
-  box-shadow: 0 0 12px rgba(37, 99, 235, 0.75);
+  box-shadow: 0 0 14px rgba(37, 99, 235, 0.75);
   transition: height 0.12s linear;
 }
 
-/* Timeline Stage Theme Palettes */
-.timeline-step[data-stage="1"] {
-  --stage-color: #0D9488;
-  --stage-glow: rgba(13, 148, 136, 0.35);
-  --stage-soft: #F0FDFA;
-  --stage-shadow: rgba(13, 148, 136, 0.22);
-}
-.timeline-step[data-stage="2"] {
-  --stage-color: #0284C7;
-  --stage-glow: rgba(2, 132, 199, 0.35);
-  --stage-soft: #F0F9FF;
-  --stage-shadow: rgba(2, 132, 199, 0.22);
-}
-.timeline-step[data-stage="3"] {
+/* Unified Blue Timeline Theme */
+.timeline-step {
   --stage-color: #2563EB;
   --stage-glow: rgba(37, 99, 235, 0.35);
   --stage-soft: #EFF6FF;
-  --stage-shadow: rgba(37, 99, 235, 0.22);
-}
-.timeline-step[data-stage="4"] {
-  --stage-color: #4F46E5;
-  --stage-glow: rgba(79, 70, 229, 0.35);
-  --stage-soft: #EEF2FF;
-  --stage-shadow: rgba(79, 70, 229, 0.22);
-}
-.timeline-step[data-stage="5"] {
-  --stage-color: #7C3AED;
-  --stage-glow: rgba(124, 58, 237, 0.35);
-  --stage-soft: #F5F3FF;
-  --stage-shadow: rgba(124, 58, 237, 0.22);
-}
-.timeline-step[data-stage="6"] {
-  --stage-color: #059669;
-  --stage-glow: rgba(5, 150, 105, 0.35);
-  --stage-soft: #ECFDF5;
-  --stage-shadow: rgba(5, 150, 105, 0.22);
-}
-.timeline-step[data-stage="7"] {
-  --stage-color: #D97706;
-  --stage-glow: rgba(217, 119, 6, 0.35);
-  --stage-soft: #FEF3C7;
-  --stage-shadow: rgba(217, 119, 6, 0.22);
+  --stage-shadow: rgba(37, 99, 235, 0.20);
 }
 
 .timeline-step {
