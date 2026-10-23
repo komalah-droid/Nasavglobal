@@ -2215,3 +2215,138 @@ textarea.form-control {
   font-weight: 700;
   font-family: var(--font-heading);
 }
+
+/* ==========================================================================
+   Caregiver Team & Training Showcase Section
+   ========================================================================== */
+.team-showcase-section {
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .team-showcase-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+  }
+}
+
+.team-showcase-media {
+  position: relative;
+}
+
+.team-image-frame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(15, 14, 50, 0.18), 0 0 0 1px rgba(15, 14, 50, 0.08);
+  background: var(--slate-100);
+}
+
+.team-image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-image-frame:hover img {
+  transform: scale(1.025);
+}
+
+.team-floating-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  background: rgba(15, 14, 50, 0.90);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--white);
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+}
+
+.team-badge-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-teal) 0%, #14b8a6 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.4);
+}
+
+.team-badge-title {
+  font-weight: 700;
+  font-size: 0.925rem;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.team-badge-sub {
+  font-size: 0.775rem;
+  color: #94A3B8;
+  line-height: 1.3;
+}
+
+.team-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin: 1.75rem 0 2rem 0;
+}
+
+.team-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.team-feature-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--brand-blue-soft);
+  color: var(--brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.team-feature-title {
+  font-family: var(--font-heading);
+  font-size: 1.025rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 0.2rem;
+}
+
+.team-feature-desc {
+  font-size: 0.9rem;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+
