@@ -631,7 +631,61 @@
       </div>
     </section>
 
+    <!-- Enquire / Consultation Section -->
+    <section class="section section-soft" id="enquireSection">
+      <div class="container" style="max-width: 680px; margin: 0 auto;">
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--primary-navy); text-align: center;">
+            Request Free Consultation
+          </h3>
+          <p style="font-size: 0.95rem; color: var(--slate-500); margin-bottom: 2rem; text-align: center;">
+            Fill out your details and our consultant will get back to you with suitable candidate biodatas within 2 hours.
+          </p>
 
+          <form id="consultationForm">
+            <div class="form-group">
+              <label class="form-label" for="consName">Your Full Name *</label>
+              <input type="text" class="form-control" id="consName" required placeholder="e.g. Tan Sri / Dato / Mr. Tan / Puan Siti">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="consPhone">WhatsApp / Mobile Contact *</label>
+              <input type="tel" class="form-control" id="consPhone" required placeholder="e.g. 012-345 6789">
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="consService">Service Focus</label>
+                <select class="form-control" id="consService">
+                  <option value="Elderly Care">Elderly & Senior Care</option>
+                  <option value="Childcare">Infant & Childcare / Nanny</option>
+                  <option value="Housekeeping">Housekeeping & Cooking</option>
+                  <option value="Permit Renewal">Work Permit Renewal</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="consNationality">Helper Nationality</label>
+                <select class="form-control" id="consNationality">
+                  <option value="Indonesian">🇮🇩 Indonesian</option>
+                  <option value="Filipino">🇵🇭 Filipino</option>
+                  <option value="Either">Either is Fine</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="consNotes">Household Details or Specific Needs (Optional)</label>
+              <textarea class="form-control" id="consNotes" placeholder="e.g. Elderly father with mobility support needed, 3-storey landed house in PJ, looking for helper starting next month..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitConsultationBtn">
+              Send Request via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
 
