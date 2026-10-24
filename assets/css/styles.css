@@ -454,7 +454,7 @@ button, input, select, textarea {
 .brand-sub {
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--accent-teal-dark);
+  color: var(--brand-blue-dark);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -485,9 +485,10 @@ button, input, select, textarea {
 }
 
 .nav-link:hover, 
-.nav-link.active {
-  color: var(--accent-teal-dark);
-  background-color: var(--accent-teal-soft);
+.nav-link.active,
+.nav-dropdown:hover > .nav-link {
+  color: var(--brand-blue-dark);
+  background-color: #EBF3FF;
 }
 
 /* Nav Dropdown */
@@ -528,15 +529,15 @@ button, input, select, textarea {
 }
 
 .dropdown-item:hover {
-  background-color: var(--slate-50);
+  background-color: #F0F6FF;
 }
 
 .dropdown-icon-box {
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background-color: var(--accent-teal-soft);
-  color: var(--accent-teal);
+  background-color: #EBF3FF;
+  color: var(--brand-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,8 +584,9 @@ button, input, select, textarea {
 }
 
 .phone-quick-btn:hover {
-  border-color: var(--accent-teal);
-  color: var(--accent-teal-dark);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue-dark);
+  background-color: #EBF3FF;
 }
 
 .mobile-toggle {
